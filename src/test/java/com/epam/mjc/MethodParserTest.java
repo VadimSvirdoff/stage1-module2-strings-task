@@ -10,6 +10,7 @@ public class MethodParserTest extends TestCase {
     @Test
     public void testParseFunction() {
         MethodSignature signature = parser.parseFunction("private void log(String logString, LogLevel level, Context context)");
+
         assertEquals(signature.getAccessModifier(), "private");
         assertEquals(signature.getReturnType(), "void");
         assertEquals(signature.getMethodName(), "log");
